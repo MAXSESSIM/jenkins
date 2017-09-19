@@ -4,6 +4,11 @@ pipeline {
 		GLOBAL_VAR = 'My Global Var'
 		}
 	
+	parameters {
+	string(name: 'DEPLOYER', defaultvalue: 'Mr Jenkins', description: 'who are you ?')
+	choice(name: 'DEPLOY_TO', choices: 'development/nproduction', description: 'Deploy to ...')
+	}
+	
 	triggers {
 		pollSCM('* * * * *')
 		}
