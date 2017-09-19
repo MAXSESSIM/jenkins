@@ -1,5 +1,6 @@
 pipeline {
 	agent any
+	
 	environment {
 		GLOBAL_VAR = 'My Global Var'
 		}
