@@ -4,7 +4,10 @@ pipeline {
 	environment {
 		GLOBAL_VAR = 'My Global Var'
 		}
+	parameters {
+		string(name: 'DEPLOYER', defaultvalue: 'Mr Jenkins', description: 'who are you ?')
 
+	}
 
 	
 	triggers {
