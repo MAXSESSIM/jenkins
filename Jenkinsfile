@@ -42,7 +42,7 @@ pipeline {
 		stage ('Deploy PROD') {
 			steps {
 				timeout(time:1, unit:'DAYS'){
-			        	imput message: 'Are you sure ?'  	
+			        	input message: 'Are you sure ?'  	
 					}
 				imput 'employing...'
 			}
