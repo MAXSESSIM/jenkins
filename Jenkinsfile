@@ -3,7 +3,7 @@ pipeline {
 
  	stages {
 		stage('Build') {
-			stpes {
+			steps {
 			//sh 'make'
 			echo 'Building ...'
 		  	}
