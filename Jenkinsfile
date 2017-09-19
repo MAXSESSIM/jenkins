@@ -12,6 +12,7 @@ pipeline {
 			sh 'ls'
 			sh 'cat README.md'
 			echo 'Building ...'
+		        sh 'node -v'
 		  	}
 		}
 		stage ('Test') {
