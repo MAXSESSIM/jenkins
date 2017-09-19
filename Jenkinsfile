@@ -39,5 +39,12 @@ pipeline {
 			echo 'Deploying...'
 			}
 		}
-	}
-}	
+		stage ('Deploy PROD') {
+			steps {
+				timeout(time:1, unit:'DAYS'){
+			        	imput message: 'Are you sure ?'  	
+					}
+				imput 'employing...'
+			}
+		}
+	}	
