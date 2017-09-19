@@ -1,7 +1,9 @@
 pipeline {
-	agent {
-		docker { image 'node:6.11.3' }
+	agent any
+	environment {
+		GLOBAL_VAR = 'My Global Var'
 		}
+	
 	triggers {
 		pollSCM('* * * * *')
 		}
@@ -10,11 +12,12 @@ pipeline {
 		stage('Build') {
 			steps {
 			//sh 'make'
+				
 			sh 'pwd'
 			sh 'ls'
 			sh 'cat README.md'
 			echo 'Building ...'
-		        sh 'node -v'
+		        sh 'printnv'
 		  	}
 		}
 		stage ('Test') {
