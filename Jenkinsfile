@@ -1,10 +1,16 @@
 pipeline {
 	agent any
-
+	triggers {
+		pollSCM('* * * * *')
+		}
+	
  	stages {
 		stage('Build') {
 			steps {
 			//sh 'make'
+			sh 'pwd'
+			sh 'ls'
+			sh 'cat ...'
 			echo 'Building ...'
 		  	}
 		}
