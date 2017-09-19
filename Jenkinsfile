@@ -44,7 +44,7 @@ pipeline {
 				timeout(time:1, unit:'DAYS'){
 			        	input message: 'Are you sure ?'  	
 					}
-				imput 'employing...'
+				input 'employing...'
 			}
 		}
 	}	
