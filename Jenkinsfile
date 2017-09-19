@@ -10,7 +10,7 @@ pipeline {
 			//sh 'make'
 			sh 'pwd'
 			sh 'ls'
-			sh 'cat ...'
+			sh 'cat README'
 			echo 'Building ...'
 		  	}
 		}
